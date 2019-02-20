@@ -10,6 +10,7 @@ class Dog
       breed TEXT
     )
     SQL
+    DB[:conn].execute(sql)
   end
 
   def initialize (id: nil, name:, breed:)
