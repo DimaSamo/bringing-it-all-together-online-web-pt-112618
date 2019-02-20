@@ -3,4 +3,5 @@ class Dog
   attr_reader :id
 
   def initalize (name:, breed:, id: nil)
+  end
 end
