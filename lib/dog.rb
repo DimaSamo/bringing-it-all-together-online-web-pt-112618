@@ -40,9 +40,9 @@ class Dog
     SELECT * FROM dogs WHERE name = ?
     SQL
     if !row.empty?
-    row = DB[:conn].execute(sql,name)[0]
-    self.new(id: row[0], name:row[1], breed: row[2])
-  end
+      row = DB[:conn].execute(sql,name)[0]
+      self.new(id: row[0], name:row[1], breed: row[2])
+    end
   end
 
   def self.find_or_create_by(name:, breed:)
