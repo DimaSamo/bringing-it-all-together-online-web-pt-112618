@@ -13,6 +13,13 @@ class Dog
     DB[:conn].execute(sql)
   end
 
+  def self.drop_table
+    sql = <<-SQL
+    DROP TABLE dogs
+    SQL
+    DB[:conn].execute(sql)
+  end
+
   def initialize (id: nil, name:, breed:)
     @name = name
     @breed = breed
