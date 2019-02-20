@@ -59,6 +59,10 @@ class Dog
     dog
   end
 
+  def self.new_from_db
+
+  end
+
   def initialize (id: nil, name:, breed:)
     @name = name
     @breed = breed
