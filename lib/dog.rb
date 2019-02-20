@@ -35,6 +35,15 @@ class Dog
     self.new(att_hash)
   end
 
+  def self.find_by_name(name)
+    sql = <<-SQL
+    SELECT * FROM dogs WHERE name = ?
+    SQL
+    row = DB[:conn].execute(sql,id)[0]
+    att_hash={id: row[0], name: row[1], breed: row[2]}
+    self.new(att_hash)
+  end
+
   def initialize (id: nil, name:, breed:)
     @name = name
     @breed = breed
