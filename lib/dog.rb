@@ -53,6 +53,7 @@ class Dog
         breed: dog[0][2]
       }
       dog = self.new(dog_data)
+    end
   end
 
   def initialize (id: nil, name:, breed:)
