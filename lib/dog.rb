@@ -39,7 +39,7 @@ class Dog
     sql = <<-SQL
     SELECT * FROM dogs WHERE name = ?
     SQL
-    row = DB[:conn].execute(sql,id)[0]
+    row = DB[:conn].execute(sql,name)[0]
     att_hash={id: row[0], name: row[1], breed: row[2]}
     self.new(att_hash)
   end
